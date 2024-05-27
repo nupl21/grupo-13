@@ -1,0 +1,510 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    color: black;
+}
+/* ---------------HEADER--------------  */
+header{
+    height: 150px;
+    background-color: rgb(255, 192, 204) ;
+    /* font-family: "Russo One", sans-serif; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+header > div > img{
+    margin-left: 15px;
+    height: 130px;
+    width: 130px;
+}
+
+header > div > h1{
+    padding-right: 350px;
+    font-size: 40px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+nav > a{
+    padding: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;   
+}
+
+a:hover{
+   color: white;
+}
+
+@media screen and (max-width: 550px)  {
+    .abrir-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: #1c1c1c
+    }
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: #ececec;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5) ;
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+        
+    }
+    .nav-list li a {
+        color: #ececec;
+    }
+}
+
+/* footer */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    background-color: #f5576c ;
+    color: #fff;
+    text-align: center;
+    font-family: "Russo One", sans-serif;
+}
+
+.formulario_titulo{
+    display: inline-block;
+    height:100px ;
+}
+
+.form_footer{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form_footer>div{
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif
+}
+.input_footer{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, .27);
+    padding: 20px;
+    align-items: center;
+}
+
+.input_footer::placeholder{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+input[type="text"], 
+input[type="email"]{
+    display: inline-block;
+    width: 69%;
+    height: 3%;
+    margin-bottom: 10px;
+}
+
+.form_footer textarea{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form_footer>input[type="submit"]{
+    width: 160px;
+    text-align: center;
+    padding: 14px;
+    margin-right: 100%;
+    border-radius: 10px;
+}
+
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: tomato;
+    background: #fff;
+}
+
+/* -------INDEX--------- */
+
+.conteiner-index{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 5px;
+    background-color: rgb(243, 241, 237);
+    border: 1px solid grey;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, .27);
+}
+
+/* --------TIENDA--------- */
+
+.tienda{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto auto; 
+    margin: 5px;
+}
+
+.tienda > div {
+    width: 280px;
+    height: 350px;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid rgb(176, 179, 172);
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, .27);
+    border-radius: 15%;
+}
+
+.tienda > div > img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.tienda > div > img:hover{
+    transform: scale(1.05);
+}
+
+.tienda >div > h1{
+    font-size: 20px;
+    font-family: "Russo One", sans-serif;
+    margin-top: 10px;
+}
+
+.tienda >div > h3{
+    font-size: 17px;
+    font-family: "Russo One", sans-serif;
+    margin-top: 10px;
+}
+
+#titulo-tienda{
+    padding-top: 30px;
+    height: 50px;
+    display: flex;
+    font-size: 30px;
+    font-family: "Russo One", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------  SERVICIOS --------*/
+
+
+
+.cards-contenedor {
+    
+    max-width: 1200px;
+    margin: 4rem;
+    text-align: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+
+
+.content-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, .27);
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.card1 {
+    width: 30%;
+    text-align: center;
+    padding-top: 200px;
+    color: #ececec;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+    
+    background-image: url(../img/peluqueria3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.card2 {
+    width: 30%;
+    text-align: center;
+    padding-top: 200px;
+    color: #ececec;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+    background-image: url(../img/guarderia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+.card3 {
+    width: 30%;
+    text-align: center;
+    padding-top: 200px;
+    color: #ececec;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+    background-image: url(../img/6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+
+.card1:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+.card2:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.card3:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.cta{
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Estilos generales */
+
+.contenedor,
+.wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+    
+}
+.contenedor{
+    padding: 80px 0;
+   
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo.left{
+    text-align: left;
+}
+
+.titulo.right{
+    text-align: right;
+}
+
+/* Section */
+
+.website{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+   
+}
+
+.website img{
+    width: 48%;
+    
+}
+
+.website .contenedor-textos-main{
+    width: 40%;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Info */
+
+.info{
+    background: #f5576c;
+    color: #fff;
+}
+
+/* galeria */
+
+.galeria{
+    background: #f2f2f2;
+}
+
+.galeria-cont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.galeria-cont>img{
+    width: 10%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+span > a > img{
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+/* ---- FORMULARIO AOPCIONES ----*/
+
+/* The container */
+
+.formularioAdopciones{
+    background-color: rgb(243, 241, 237);
+    color: rgb(98, 98, 118);
+}
+
+.titulo1{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 30px;
+    font-family: 'raleway', 'sans-serif';
+    padding:20px 10px ;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input{
+    background: transparent;
+    border: 0;
+    color: grey;
+    outline: none;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, .27);
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.input::placeholder{
+    color: grey;
+    font-family: 'raleway', 'sans-serif';
+}
+
+input[type="text"], 
+input[type="email"]{
+    display: inline-block;
+    width: 69%;
+    margin-bottom: 30px;
+}
+input[type="radio"] {
+    display: ruby-base-container;
+    text-align: center;
+    
+    margin-bottom: 30px;
+
+}
+
+
+
+.form textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    width: 160px;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: grey;
+    background: rgb(255, 192, 204);
+}
+
